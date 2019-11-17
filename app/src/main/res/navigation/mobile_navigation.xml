@@ -12,32 +12,43 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.pubgt.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.pubgt.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.example.pubgt.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.pubgt.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
         android:id="@+id/nav_send"
         android:name="com.example.pubgt.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
+    <fragment
+        android:id="@+id/nav_myAccount"
+        android:name="com.example.pubgt.MyAccountFragment"
+        android:label="MY Account"
+        tools:layout="@layout/fragment_my_account" />
+    <fragment
+        android:id="@+id/nav_ptc"
+        android:name="com.example.pubgt.PTCFragment"
+        android:label="fragment_ptc"
+        tools:layout="@layout/fragment_ptc" />
+    <fragment
+        android:id="@+id/nav_wc"
+        android:name="com.example.pubgt.WCFragment"
+        android:label="WC"
+        tools:layout="@layout/fragment_wc" />
+    <fragment
+        android:id="@+id/nav_tournament"
+        android:name="com.example.pubgt.TournamentFragment"
+        android:label="Tournament"
+        tools:layout="@layout/fragment_tournament" />
+    <fragment
+        android:id="@+id/nav_event"
+        android:name="com.example.pubgt.EventFragment"
+        android:label="Event"
+        tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/nav_runTournament"
+        android:name="com.example.pubgt.RuningTournamentFragment"
+        android:label="Runing Tournament"
+        tools:layout="@layout/fragment_runing_tournament" />
+    <fragment
+        android:id="@+id/nav_shop"
+        android:name="com.example.pubgt.ShopFragment"
+        android:label="Shop"
+        tools:layout="@layout/fragment_shop" />
 </navigation>

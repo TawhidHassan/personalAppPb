@@ -6,32 +6,44 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_account_balance_black_24dp"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_myAccount"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="My Account" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_ptc"
+            android:icon="@drawable/ic_local_activity_black_24dp"
+            android:title="PTC" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_wc"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="WC" />
+        <item
+            android:id="@+id/nav_tournament"
+            android:icon="@drawable/ic_videogame_asset_black_24dp"
+            android:title="Tournament" />
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Event" />
+        <item
+            android:id="@+id/nav_runTournament"
+            android:icon="@drawable/ic_movie_filter_black_24dp"
+            android:title="Runing Tournament" />
+        <item
+            android:id="@+id/nav_shop"
+            android:icon="@drawable/ic_shop_black_24dp"
+            android:title="Shop" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
-            <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:title="Log Out" />
         </menu>
     </item>
 

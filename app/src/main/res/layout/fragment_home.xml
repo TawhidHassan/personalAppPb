@@ -520,9 +520,10 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="70dp"
                     android:layout_marginLeft="70dp"
-                    android:text="Metarial dashbord"
-                    android:textColor="@color/main_text"
-                    android:textSize="25dp"
+                    android:text="player unknown battleground"
+                    android:typeface="monospace"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
