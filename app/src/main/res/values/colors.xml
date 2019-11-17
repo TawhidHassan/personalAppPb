@@ -15,4 +15,22 @@
     <color name="tab_indicator_gray">#C1C0C1</color>
     <color name="intro_title_color">#020102</color>
     <color name="intro_description_color">#6B6567</color>
+
+
+<!--    for home-->
+    <color name="main_text">#000</color>
+
+
+    <color name="part2">#241332</color>
+    <color name="part3">#9599b3</color>
+
+    <color name="name_d">#221131</color>
+    <color name="date_d">#a7aBae</color>
+    <color name="text_d">#7b7185</color>
+
+    <color name="name_l">#fff</color>
+    <color name="date_l">#bcbece</color>
+    <color name="text_l">#bcdece</color>
+
+    <color name="border">#eeebef</color>
 </resources>
