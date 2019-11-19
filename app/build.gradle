@@ -35,4 +35,6 @@ dependencies {
 
     //round image libary
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    //    for that project
+    implementation 'com.google.android.material:material:1.0.0'
 }
