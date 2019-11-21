@@ -14,7 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <RelativeLayout
                 android:id="@+id/rel5"
                 android:layout_below="@+id/rel4"
@@ -390,117 +389,34 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="70dp">
 
-                    <RelativeLayout
-                        android:id="@+id/rel3_rel1"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="35dp"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginEnd="35dp">
-
-                        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/pro1"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/profile"
-                            app:riv_border_width="1dip"
-                            app:riv_corner_radius="50dip" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_toEndOf="@id/pro1"
-                            android:layout_toRightOf="@id/pro1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Sifat hassan"
-                                android:textColor="@color/name_d"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="8 NOV 2019"
-                                android:textColor="@color/date_d"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:padding="12dp"
-                            android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/rel3_rel1"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="40dp"
-                        android:lineSpacingMultiplier="1.2"
-                        android:text="Android devloper is goin to be on,sifat
-                                \n main item is android"
-                        android:textColor="@color/text_d"
-                        android:textSize="15sp"
-                        android:textStyle="normal" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
-                        android:layout_alignParentBottom="true"
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/banner_sliderViewPagerId"
+                        layout_constraintTop_toBottomOf="@+id/rel2"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="40dp"
-                        android:layout_marginBottom="30dp"
-                        android:orientation="horizontal"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="40dp">
+                        android:layout_marginStart="58dp"
+                        android:layout_marginLeft="58dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="52dp"
+                        android:layout_marginRight="52dp"
+                        android:paddingLeft="24dp"
+                        android:paddingTop="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.496"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--        elevation for shadwo-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="421"
-                            android:textColor="@color/text_d"
-                            android:textSize="14dp"
-                            android:layout_gravity="center_vertical"/>
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/ic_comment_black_24dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="7dp"
-                            android:layout_marginLeft="7dp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="121"
-                            android:textColor="@color/text_d"
-                            android:textSize="14dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="10dp" />
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@drawable/ic_whatshot_black_24dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="7dp"
-                            android:layout_marginLeft="7dp" />
-                    </LinearLayout>
+
 
                 </RelativeLayout>
             </RelativeLayout>
