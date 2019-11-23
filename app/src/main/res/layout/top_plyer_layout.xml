@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/topPlayeruserPhotoId"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_width="1dip"
+        app:riv_corner_radius="50dip" />
+
+    <TextView
+        android:id="@+id/topPlyerNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Sifat hassan"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/intro_title_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/topPlayeruserPhotoId"
+        app:layout_constraintTop_toTopOf="@+id/topPlayeruserPhotoId" />
+
+    <TextView
+        android:id="@+id/topPlyerPubgNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sifat007"
+        android:textColor="#313030"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/topPlyerNameId"
+        app:layout_constraintTop_toBottomOf="@+id/topPlyerNameId" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/topPlayeruserPhotoId"
+        app:layout_constraintTop_toBottomOf="@+id/topPlayeruserPhotoId"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/topPlyerNoWinMatchId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 win"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topPlyerNoWinMatchId"
+        app:layout_constraintStart_toEndOf="@+id/topPlyerNoWinMatchId"
+        app:layout_constraintTop_toTopOf="@+id/topPlyerNoWinMatchId"
+        app:srcCompat="@drawable/ic_whatshot_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/topPlyerTotalKillId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 kill"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+</androidx.constraintlayout.widget.ConstraintLayout>
