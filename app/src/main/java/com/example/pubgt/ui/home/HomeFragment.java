@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.pubgt.R;
+import com.example.pubgt.RuningMatchModel;
 import com.example.pubgt.SliderAdapter;
 import com.example.pubgt.SliderModel;
 import com.example.pubgt.TopPlayerAdapter;
@@ -42,19 +43,30 @@ public class HomeFragment extends Fragment {
     final private long Period_time = 3000;
     //slider banner
 
+    LinearLayoutManager layoutManager;
+
     //top player
     private RecyclerView topPlayerRecyclerView;
     private List<TopPlayerModel> topPlayerModelList = new ArrayList<>();
     //top player
+
+    // Runing match
+    private RecyclerView runingMatchRecyclerView;
+    private List<RuningMatchModel> runingMatchModelList = new ArrayList<>();
+    //Runing match
 
     @SuppressLint("ClickableViewAccessibility")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-// topPlayer RecyclerView
+       // topPlayer RecyclerView
         topPlayerRecyclerView = view.findViewById(R.id.tprecId);
         //topPlayer RecyclerView
+
+        //   //Runing match
+        runingMatchRecyclerView = view.findViewById(R.id.runingMatchRecyclerViewId);
+        //  //Runing match
 
         //baner slider viewPager
         bannerSliderViewPager = view.findViewById(R.id.banner_sliderViewPagerId);
@@ -118,8 +130,11 @@ public class HomeFragment extends Fragment {
         //======================================================================================================
 
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        //common layout manager for 3 type of recycler view
+        layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+
+
         topPlayerRecyclerView.setLayoutManager(layoutManager);
 
         topPlayerModelList.add(new TopPlayerModel(R.drawable.profile, "Sifat Hassan", "sifat007", 32, 20));
@@ -132,6 +147,11 @@ public class HomeFragment extends Fragment {
 
 
         topPlayerRecyclerView.setAdapter(topPlayerAdapter);
+        ///----------------------------------------------------------------------------------------------------
+        //======================================================================================================
+        // Runing match
+
+        // Runing match
 
         return view;
     }
@@ -147,7 +167,6 @@ public class HomeFragment extends Fragment {
             bannerSliderViewPager.setCurrentItem(cureentSlider, false);
         }
     }
-
     private void startBannerSlideShow() {
         final Handler handler = new Handler();
         final Runnable update = new Runnable() {
@@ -167,8 +186,8 @@ public class HomeFragment extends Fragment {
             }
         }, Delay_time, Period_time);
     }
-
     private void stopBannerSlide() {
         timer.cancel();
     }
+    //for slider banner auto scrool
 }

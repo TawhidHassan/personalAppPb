@@ -1,191 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SigninFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#EFA508">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.13"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.75"
-            app:srcCompat="@mipmap/facebook" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="32dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/imageView3"
-            app:srcCompat="@mipmap/twitter" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView5"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2"
-            app:srcCompat="@mipmap/playstore" />
-
-        <com.github.florent37.shapeofview.shapes.DiagonalView
-            android:id="@+id/diagonalView"
-            android:layout_width="0dp"
-            android:layout_height="500dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shape_diagonal_angle="20"
-            app:shape_diagonal_direction="right"
-            app:shape_diagonal_position="bottom"
-            app:shape_roundRect_bottomLeftRadius="150dp"
-            tools:visibility="visible">
-
-            <LinearLayout
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EFA508">
+            <com.github.florent37.shapeofview.shapes.DiagonalView
+                android:id="@+id/diagonalView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background"
-                android:orientation="vertical"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shape_diagonal_angle="20"
+                app:shape_diagonal_direction="right"
+                app:shape_diagonal_position="bottom"
+                app:shape_roundRect_bottomLeftRadius="150dp"
+                tools:visibility="visible">
 
-
-                <TextView
-                    android:id="@+id/textView2"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="20dp"
-                    android:text="LOGIN"
-                    android:textColor="#4E4F51"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:text="Enter you eamil"
-                    android:textColor="#CCC8C8"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-
-                    />
-
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-
-                    >
-
-                </EditText>
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:text="Enter you password"
-                    android:textColor="#CCC8C8"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPassword" />
-
-                <TextView
-                    android:id="@+id/resetPasswordId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="20dp"
-                    android:text="Forget Password?"
-                    android:textAlignment="textEnd"
-                    android:textSize="14sp" />
-                <ImageButton
-                    android:id="@+id/loginBtnId"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="120dp"
-                    android:backgroundTint="#EFA508"
-                    android:background="@drawable/login_button_bkc"
-                    app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
-                    tools:ignore="VectorDrawableCompat" />
-
-            </LinearLayout>
-
-        </com.github.florent37.shapeofview.shapes.DiagonalView>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Are your not Register? "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.41"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/diagonalView"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            />
-
-        <TextView
-            android:id="@+id/regesterAcBtnId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register."
-            android:background="@drawable/login_button_bkc"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="@+id/textView6"
-            android:textSize="18sp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"/>
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingBottom="20dp"
+                    android:id="@+id/loginFrome"
+                    android:paddingRight="12dp">
 
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="20dp"
+                        android:text="LOGIN"
+                        android:textColor="#4E4F51"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:text="Enter you eamil"
+                        android:textColor="#CCC8C8"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+
+                        >
+
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Enter you password"
+                        android:textColor="#CCC8C8"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:id="@+id/resetPasswordId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="20dp"
+                        android:text="Forget Password?"
+                        android:textAlignment="textEnd"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:id="@+id/loginBtnId"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/login_button_bkc"
+                        android:backgroundTint="#EFA508"
+                        app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
+                        tools:ignore="VectorDrawableCompat" />
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/diagonalView"
+                android:layout_alignStart="@+id/diagonalView"
+                android:layout_alignLeft="@+id/diagonalView"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="-70dp"
+                app:srcCompat="@mipmap/facebook"
+                tools:ignore="NotSibling" />
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/diagonalView"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="-40dp"
+                android:layout_toEndOf="@+id/facebook"
+                android:layout_toRightOf="@+id/facebook"
+                app:srcCompat="@mipmap/playstore"
+                tools:ignore="NotSibling" />
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/diagonalView"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="-10dp"
+                android:layout_toEndOf="@+id/google"
+                android:layout_toRightOf="@+id/google"
+                app:srcCompat="@mipmap/twitter"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:text="Are your not Register? "
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/regesterAcBtnId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="18dp"
+                android:layout_toEndOf="@+id/textView6"
+                android:layout_toRightOf="@+id/textView6"
+                android:background="@drawable/login_button_bkc"
+                android:text="Register."
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+
+        </RelativeLayout>
+
 
 </FrameLayout>
