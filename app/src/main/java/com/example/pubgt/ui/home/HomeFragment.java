@@ -7,19 +7,17 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.pubgt.MatchAdapter;
 import com.example.pubgt.R;
-import com.example.pubgt.RuningMatchModel;
+import com.example.pubgt.MatchModel;
 import com.example.pubgt.SliderAdapter;
 import com.example.pubgt.SliderModel;
 import com.example.pubgt.TopPlayerAdapter;
@@ -43,7 +41,7 @@ public class HomeFragment extends Fragment {
     final private long Period_time = 3000;
     //slider banner
 
-    LinearLayoutManager layoutManager;
+
 
     //top player
     private RecyclerView topPlayerRecyclerView;
@@ -52,7 +50,7 @@ public class HomeFragment extends Fragment {
 
     // Runing match
     private RecyclerView runingMatchRecyclerView;
-    private List<RuningMatchModel> runingMatchModelList = new ArrayList<>();
+    private List<MatchModel> runingMatchModelList = new ArrayList<>();
     //Runing match
 
     @SuppressLint("ClickableViewAccessibility")
@@ -131,7 +129,7 @@ public class HomeFragment extends Fragment {
 
 
         //common layout manager for 3 type of recycler view
-        layoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
 
@@ -150,7 +148,16 @@ public class HomeFragment extends Fragment {
         ///----------------------------------------------------------------------------------------------------
         //======================================================================================================
         // Runing match
+        LinearLayoutManager runingMatchlayoutManager = new LinearLayoutManager(getActivity());
+        runingMatchlayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        runingMatchRecyclerView.setLayoutManager(runingMatchlayoutManager);
+        runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
+        runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
+        runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
+        runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
 
+        MatchAdapter matchAdapter=new MatchAdapter(runingMatchModelList);
+        runingMatchRecyclerView.setAdapter(matchAdapter);
         // Runing match
 
         return view;

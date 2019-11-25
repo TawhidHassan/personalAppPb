@@ -15,10 +15,52 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
+                android:id="@+id/rel6"
+                android:layout_below="@+id/rel5"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@drawable/part6_background"
+                android:layout_marginTop="-60dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:padding="10dp"
+                    >
+                <TextView
+                    android:id="@+id/runmatchtitleId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Player"
+                    android:textStyle="bold"
+                    android:textColor="@color/name_d"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/runingMatchRecyclerViewId"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_below="@+id/runmatchtitleId"
+                    android:padding="5dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/rel5"
                 android:layout_below="@+id/rel4"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="310dp"
                 android:layout_marginTop="-70dp"
                 android:paddingBottom="16dp"
                 android:background="@drawable/part4_background"
@@ -44,16 +86,16 @@
                         />
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/tprecId"
-                        android:layout_width="300dp"
+                        android:layout_width="400dp"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginEnd="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginRight="14dp"
                         android:layout_below="@+id/topTitleId"
                         android:padding="5dp"/>
 
@@ -355,53 +397,11 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/rel6"
-                android:layout_below="@+id/rel5"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:layout_marginTop="-70dp"
-                android:paddingBottom="16dp"
-                android:background="@drawable/part6_background"
-                >
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="70dp"
-                    android:padding="10dp"
-                    >
-
-                    <TextView
-                        android:id="@+id/runingMatchTitleId"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Runing match"
-                        android:textStyle="bold"
-                        android:textColor="@color/name_d"
-                        android:textSize="24sp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginBottom="10dp"
-                        />
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/runingMatchRecyclerViewId"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginEnd="24dp"
-                        android:layout_marginRight="24dp"
-                        android:layout_below="@+id/runingMatchTitleId"
-                        android:padding="5dp"/>
 
 
-                </RelativeLayout>
 
-            </RelativeLayout>
+
+
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
