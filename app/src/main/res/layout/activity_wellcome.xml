@@ -57,13 +57,12 @@
         android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/login_button_bkc"
         android:backgroundTint="#FDD202"
         app:layout_constraintBottom_toBottomOf="@+id/arcView"
         app:layout_constraintEnd_toEndOf="@+id/arcView"
         app:layout_constraintStart_toStartOf="@+id/arcView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/ic_arrow_upward_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 
