@@ -17,4 +17,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="ptc_rules">Player Tournament Coin(PTC) it need to be played tournament./n
+Every day you earn just 15 ptc. when you join any tournament/n
+increase you ptc from you current ptc. Tournaments Ptc are not/n
+fixed it will be changed by management comity.so don not be hipe/n
+if you have any doubt you can send us feedback or email us.</string>
+    <string name="ptc_earn">Earning ptc is very simple. you need just watch video/n
+ Ads (Warning: please show full add). when you show full one ad/n
+then you earn 1Ptc coin.
+</string>
 </resources>
