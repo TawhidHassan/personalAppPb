@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/pubgiconhelmate"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChangePasswordActivity"></activity>
+        <activity android:name=".UpdatePersonalDataActivity"></activity>
+        <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".AddPaymentMethodActivity" />
         <activity android:name=".MyAccountActivity" />
         <activity android:name=".WellcomeActivity" />
