@@ -25,6 +25,7 @@ public class MyAccountFragment extends Fragment {
     LinearLayout accountBtn;
     LinearLayout addPaymentMethodBtn;
     LinearLayout changePasswordBtn;
+    LinearLayout updateBtn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class MyAccountFragment extends Fragment {
         accountBtn=view.findViewById(R.id.accountBtnId);
         addPaymentMethodBtn=view.findViewById(R.id.addPaymentInfoBtnId);
         changePasswordBtn=view.findViewById(R.id.changePasswordBtnId);
+        updateBtn=view.findViewById(R.id.updateBtnId);
 
 
         accountBtn.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +57,14 @@ public class MyAccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent accountIntent=new Intent(getActivity(),ChangePasswordActivity.class);
+                getActivity().startActivity(accountIntent);
+
+            }
+        });
+        updateBtn .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent accountIntent=new Intent(getActivity(),UpdatePersonalDataActivity.class);
                 getActivity().startActivity(accountIntent);
 
             }
