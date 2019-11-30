@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp"
+    android:background="@drawable/corner"
+    android:layout_margin="20dp"
+    >
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/roundRectView"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_roundRect_borderColor="@color/name_d"
+        app:shape_roundRect_borderWidth="2dp"
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
+
+        <ImageView
+            android:id="@+id/eventPhotoId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/photoeight" />
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+    <TextView
+        android:id="@+id/eventTitleId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Big fraiday"
+        android:textStyle="bold"
+        android:textColor="#EF5258"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roundRectView"
+        app:layout_constraintTop_toTopOf="@+id/roundRectView" />
+
+    <TextView
+        android:id="@+id/eventDetailsId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="win
+e match you  get 1.Wc, 5 kill you earn 1 not fixed
+.That amount of wc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#2D2F31"
+        app:layout_constraintBottom_toTopOf="@+id/eventDateTimeId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/eventTitleId"
+        app:layout_constraintTop_toBottomOf="@+id/eventTitleId" />
+
+    <TextView
+        android:id="@+id/eventDateTimeId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="23/12/2019 Time: 12:00PM"
+        android:textSize="13sp"
+        android:textColor="#19112E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/roundRectView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/eventDetailsId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -79,7 +79,7 @@
                     android:layout_centerInParent="true"
                     android:textStyle="bold"
                     android:textColor="@color/mainColor"
-                    android:textSize="17sp"
+                    android:textSize="24sp"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </RelativeLayout>
         </LinearLayout>
