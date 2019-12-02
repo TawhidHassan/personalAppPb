@@ -6,6 +6,7 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -16,24 +17,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.ViewHolder> {
+public class RuningTournamentAdapter extends RecyclerView.Adapter<RuningTournamentAdapter.ViewHolder> {
+    List<TournamentModel> tournamentModelList;
 
-    List<TournamentModel>tournamentModelList;
-
-    public TournamentAdapter(List<TournamentModel> tournamentModelList) {
+    public RuningTournamentAdapter(List<TournamentModel> tournamentModelList) {
         this.tournamentModelList = tournamentModelList;
     }
-
     @NonNull
     @Override
-    public TournamentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RuningTournamentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.tournament_item_layout,parent,false);
         return new ViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(@NonNull TournamentAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         int tournamentPhoto=tournamentModelList.get(position).getTournamentPhoto();
         String tournamentName=tournamentModelList.get(position).getTournamnetName();
         String tournamentType=tournamentModelList.get(position).getTournamnetType();
@@ -46,13 +45,19 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
         String thirdPrice=tournamentModelList.get(position).getThirdPrice();
         String perKill=tournamentModelList.get(position).getPerKill();
         int joinPlayer=tournamentModelList.get(position).getPlayerJoin();
-        holder.setTournament(tournamentPhoto,tournamentName,tournamentType,tournamentMap,tournamentTotalPlayer,tournamentdate,tournamentTime,firstPrice,sceoundPrice,thirdPrice,perKill,joinPlayer);
+        boolean status=tournamentModelList.get(position).tournamentStatus;
+        if (status)
+        {
 
+            holder.setTournament(tournamentPhoto,tournamentName,tournamentType,tournamentMap,tournamentTotalPlayer,tournamentdate,tournamentTime,firstPrice,sceoundPrice,thirdPrice,perKill,joinPlayer,status);
+        }
 
     }
 
+
     @Override
     public int getItemCount() {
+
         return tournamentModelList.size();
     }
 
@@ -70,6 +75,7 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
         TextView Tthirdprice;
         TextView TPerKill;
         TextView TJoinPlayer;
+        Button joinBtn;
         ProgressBar progressBar;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,11 +91,12 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
             Tthirdprice=itemView.findViewById(R.id.thirdPriceId);
             TPerKill=itemView.findViewById(R.id.perKillId);
             TJoinPlayer=itemView.findViewById(R.id.joinPlayerCountId);
+            joinBtn=itemView.findViewById(R.id.joinBtnId);
             progressBar=itemView.findViewById(R.id.joinPlayerProgressBarId);
         }
         @SuppressLint("ResourceAsColor")
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-        void setTournament(int photo, String name, String type, String map, String totalPlayer, String date, String time, String first, String sceound, String third, String perKill, int join)
+        private void setTournament(int photo, String name, String type, String map, String totalPlayer, String date, String time, String first, String sceound, String third, String perKill, int join,boolean status)
         {
             Tphoto.setImageResource(photo);
             TName.setText(name);
@@ -105,7 +112,15 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
             TJoinPlayer.setText("100/"+join);
             progressBar.setProgress(join);
             progressBar.setProgressTintList(ColorStateList.valueOf(R.color.mainColor));
+            if (status)
+            {
+                joinBtn.setEnabled(false);
+                joinBtn.setText("Runing");
+                joinBtn.setTextColor(R.color.part3);
+            }
 
         }
     }
 }
+
+

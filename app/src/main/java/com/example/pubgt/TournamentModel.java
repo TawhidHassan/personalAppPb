@@ -13,8 +13,9 @@ public class TournamentModel {
     String sceoundPrice;
     String thirdPrice;
     int playerJoin;
+    boolean tournamentStatus;
 
-    public TournamentModel(int tournamentPhoto, String tournamnetName, String tournamnetMap, String tournamnetType, String tournamnetTotalPlayers, String tournamnetDate, String tournamnetTime, String perKill, String firstPrice, String sceoundPrice, String thirdPrice, int playerJoin) {
+    public TournamentModel(int tournamentPhoto, String tournamnetName, String tournamnetMap, String tournamnetType, String tournamnetTotalPlayers, String tournamnetDate, String tournamnetTime, String perKill, String firstPrice, String sceoundPrice, String thirdPrice, int playerJoin, boolean tournamentStatus) {
         this.tournamentPhoto = tournamentPhoto;
         this.tournamnetName = tournamnetName;
         this.tournamnetMap = tournamnetMap;
@@ -27,6 +28,7 @@ public class TournamentModel {
         this.sceoundPrice = sceoundPrice;
         this.thirdPrice = thirdPrice;
         this.playerJoin = playerJoin;
+        this.tournamentStatus = tournamentStatus;
     }
 
     public int getTournamentPhoto() {
@@ -123,5 +125,13 @@ public class TournamentModel {
 
     public void setPlayerJoin(int playerJoin) {
         this.playerJoin = playerJoin;
+    }
+
+    public boolean isTournamentStatus() {
+        return tournamentStatus;
+    }
+
+    public void setTournamentStatus(boolean tournamentStatus) {
+        this.tournamentStatus = tournamentStatus;
     }
 }

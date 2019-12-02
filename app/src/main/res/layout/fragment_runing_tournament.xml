@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RuningTournamentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/mainColor"
+        android:orientation="horizontal"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/runingTournamentrecyclerViewId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Runing tournamnet" />
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="90dp"
+        android:layout_marginTop="-120dp">
 
-</FrameLayout>
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</RelativeLayout>

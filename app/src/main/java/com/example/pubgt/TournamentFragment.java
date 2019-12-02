@@ -40,11 +40,11 @@ public class TournamentFragment extends Fragment {
 
         tournamentrecyclerView.setLayoutManager(layoutManager);
         //list of events
-        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",10));
-        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",75));
-        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",50));
-        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",80));
-        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",20));
+        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",10,false));
+        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",75,false));
+        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",50,false));
+        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",80,false));
+        tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",20,false));
 
         //set event
         TournamentAdapter tournamentAdapter=new TournamentAdapter(tournamentModelList);
