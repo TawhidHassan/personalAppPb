@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ShopFragment">
 
     <LinearLayout
@@ -25,8 +26,9 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/bigOfferId"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/titleX"
@@ -45,7 +47,7 @@
             android:textSize="28sp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -58,4 +60,21 @@
             android:layout_marginTop="20dp"
             />
     </LinearLayout>
+
+   <GridView
+       android:id="@+id/shopGridViewId"
+       android:padding="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/bigOfferId"
+       android:columnWidth="70dp"
+       android:layout_marginBottom="65dp"
+       android:numColumns="2"
+       android:verticalSpacing="10dp"
+       android:horizontalSpacing="10dp"
+       android:gravity="center"
+
+       >
+
+   </GridView>
 </RelativeLayout>
