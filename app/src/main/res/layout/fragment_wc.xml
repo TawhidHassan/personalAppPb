@@ -30,28 +30,27 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/titlex"
         android:layout_marginTop="-60dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="95dp"
         android:background="@drawable/top_corner_background"
         android:backgroundTint="@color/white"
         android:orientation="vertical">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/wctabLayoutId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:tabSelectedTextColor="@color/name_d"
-            app:tabTextColor="#888787"
-           >
 
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/wctabLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:tabSelectedTextColor="@color/name_d"
+                app:tabTextColor="#888787"
+                >
+            </com.google.android.material.tabs.TabLayout>
 
-        </com.google.android.material.tabs.TabLayout>
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/wcViewPagerID"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/wcViewPagerID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
     </LinearLayout>
 
 </RelativeLayout>
