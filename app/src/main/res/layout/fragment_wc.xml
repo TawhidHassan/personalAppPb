@@ -9,7 +9,7 @@
    <LinearLayout
        android:id="@+id/titlex"
        android:layout_width="match_parent"
-       android:layout_height="200dp"
+       android:layout_height="150dp"
        android:orientation="horizontal"
        android:background="@color/mainColor"
        >
@@ -35,11 +35,10 @@
         android:backgroundTint="@color/white"
         android:orientation="vertical">
 
-
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/wctabLayoutId"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_marginTop="8dp"
                 app:tabSelectedTextColor="@color/name_d"
                 app:tabTextColor="#888787"

@@ -28,4 +28,13 @@ if you have any doubt you can send us feedback or email us.</string>
  Ads (Warning: please show full add). when you show full one ad
 then you earn 1Ptc coin.
 </string>
+
+    <string name="wc_rules">Wc is your main balance which you exchange to money(Tk.). Minimum
+60.Wc you exchange. Wc is depend some condition like (wine match you
+get 1.Wc, 5 kill you earn 1.Wc) it was not fixed .That amount of wc is
+changeable. PBGT community are fixing that before any tournament start.
+when you join the tournament you will check the wc rate, make sure and join
+the tournament.
+
+</string>
 </resources>

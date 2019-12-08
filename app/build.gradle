@@ -19,6 +19,12 @@ android {
     }
 }
 
+//for pie chart
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+//for pie chart
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -41,4 +47,7 @@ dependencies {
     implementation 'com.makeramen:roundedimageview:2.3.0'
     //    for that project
     implementation 'com.google.android.material:material:1.0.0'
+
+    //for piechart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
