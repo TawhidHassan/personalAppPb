@@ -50,6 +50,7 @@ public class HomeFragment extends Fragment {
 
     // Runing match
     private RecyclerView runingMatchRecyclerView;
+    private RecyclerView UpComeingMatchRecyclerView;
     private List<MatchModel> runingMatchModelList = new ArrayList<>();
     //Runing match
 
@@ -64,6 +65,7 @@ public class HomeFragment extends Fragment {
 
         //   //Runing match
         runingMatchRecyclerView = view.findViewById(R.id.runingMatchRecyclerViewId);
+        UpComeingMatchRecyclerView = view.findViewById(R.id.UpComeingMatchRecyclerViewId);
         //  //Runing match
 
         //baner slider viewPager
@@ -151,6 +153,11 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager runingMatchlayoutManager = new LinearLayoutManager(getActivity());
         runingMatchlayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         runingMatchRecyclerView.setLayoutManager(runingMatchlayoutManager);
+
+        LinearLayoutManager UpcomeIngMatchlayoutManager = new LinearLayoutManager(getActivity());
+        UpcomeIngMatchlayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        UpComeingMatchRecyclerView.setLayoutManager(UpcomeIngMatchlayoutManager);
+
         runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
         runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
         runingMatchModelList.add(new MatchModel("big chiken","shanok",R.drawable.photoeight,100,20,1,"11/12/2019","12:29",true,100,200,300,400,1000));
@@ -158,6 +165,7 @@ public class HomeFragment extends Fragment {
 
         MatchAdapter matchAdapter=new MatchAdapter(runingMatchModelList);
         runingMatchRecyclerView.setAdapter(matchAdapter);
+        UpComeingMatchRecyclerView.setAdapter(matchAdapter);
         // Runing match
 
         return view;
