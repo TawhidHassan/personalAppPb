@@ -53,9 +53,9 @@ public class IntroActivity extends AppCompatActivity {
         getStartButton.setVisibility(View.GONE);
         //list
         final List<IntroModel> introModelList=new ArrayList<>();
-        introModelList.add(new IntroModel("Fresh food","Throughout the docs, we will often use the router instance. Keep in mind that this.$router is exactly the s",R.drawable.img1));
-        introModelList.add(new IntroModel("Fresh Firt delivery","Throughout the docs, we will often use the router instance. Keep in mind that this.$router is exactly the s",R.drawable.img1));
-        introModelList.add(new IntroModel("Low cost","Throughout the docs, we will often use the router instance. Keep in mind that this.$router is exactly the s",R.drawable.img1));
+        introModelList.add(new IntroModel("Earn Money By Playing The Game","Players that want to play  their game, by our created custom tournament. The rules are very simple.so be ready to win some serious money!",R.drawable.make_money));
+        introModelList.add(new IntroModel("Tow to join tournament in PUBGT","For join tournament you need PTC coin, and that coin you earn by free. You need jus show 10 ads and earn 5 PTC.",R.drawable.join_tournamet));
+        introModelList.add(new IntroModel("How to withdraw money from PUBGT","It was very simple to withdraw money. First you earn Wc coin by playing Tournamnet. Then you got exchange thta wc in to Tk/Faxiload/Bkash/Uc",R.drawable.undraw_wallet));
 
 //        setup viewPager
         screenPager=findViewById(R.id.viewPager);
