@@ -47,8 +47,9 @@ public class TournamentFragment extends Fragment {
         tournamentModelList.add(new TournamentModel(R.drawable.profile, "Big friday fight", "Shanok", "Squed", "100","11/11/2019","2:20pm","2tk","300tk","200tk","100tk",20,false));
 
         //set event
-        TournamentAdapter tournamentAdapter=new TournamentAdapter(tournamentModelList);
+        TournamentAdapter tournamentAdapter=new TournamentAdapter(tournamentModelList,getContext());
         tournamentrecyclerView.setAdapter(tournamentAdapter);
+
         ///----------------------------------------------------------------------------------------------------
         //======================================================================================================
 

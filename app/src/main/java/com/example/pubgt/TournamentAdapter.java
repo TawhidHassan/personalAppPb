@@ -1,11 +1,14 @@
 package com.example.pubgt;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,9 +22,11 @@ import java.util.List;
 public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.ViewHolder> {
 
     List<TournamentModel>tournamentModelList;
+    private Context context;
 
-    public TournamentAdapter(List<TournamentModel> tournamentModelList) {
+    public TournamentAdapter(List<TournamentModel> tournamentModelList,Context context) {
         this.tournamentModelList = tournamentModelList;
+        this.context=context;
     }
 
     @NonNull
@@ -33,7 +38,7 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(@NonNull TournamentAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TournamentAdapter.ViewHolder holder, final int position) {
         int tournamentPhoto=tournamentModelList.get(position).getTournamentPhoto();
         String tournamentName=tournamentModelList.get(position).getTournamnetName();
         String tournamentType=tournamentModelList.get(position).getTournamnetType();
@@ -49,6 +54,14 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
         holder.setTournament(tournamentPhoto,tournamentName,tournamentType,tournamentMap,tournamentTotalPlayer,tournamentdate,tournamentTime,firstPrice,sceoundPrice,thirdPrice,perKill,joinPlayer);
 
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tournamentIntent=new Intent(context,TournamentDetailsActivity.class);
+                v.getContext().startActivity(tournamentIntent);
+
+            }
+        });
     }
 
     @Override
@@ -70,8 +83,9 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
         TextView Tthirdprice;
         TextView TPerKill;
         TextView TJoinPlayer;
+        Button joinBtn;
         ProgressBar progressBar;
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull final View itemView) {
             super(itemView);
             Tphoto=itemView.findViewById(R.id.tournamentxPhotoId);
             TName=itemView.findViewById(R.id.tournamenttitleId);
@@ -86,6 +100,15 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
             TPerKill=itemView.findViewById(R.id.perKillId);
             TJoinPlayer=itemView.findViewById(R.id.joinPlayerCountId);
             progressBar=itemView.findViewById(R.id.joinPlayerProgressBarId);
+            joinBtn=itemView.findViewById(R.id.joinBtnId);
+
+            joinBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent tournamentIntent=new Intent(context,TournamentDetailsActivity.class);
+                    v.getContext().startActivity(tournamentIntent);
+                }
+            });
         }
         @SuppressLint("ResourceAsColor")
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

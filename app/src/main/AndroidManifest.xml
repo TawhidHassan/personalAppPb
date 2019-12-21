@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/pubgiconhelmate"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdatePersonalDataActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".ChangePasswordActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".AddPaymentMethodActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MyAccountActivity"
-            android:parentActivityName=".MainActivity"
-            />
+        <activity android:name=".TournamentDetailsActivity"></activity>
+        <activity
+            android:name=".UpdatePersonalDataActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddPaymentMethodActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MyAccountActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".WellcomeActivity" />
         <activity android:name=".RegesterActivity" />
         <activity android:name=".IntroActivity" />
