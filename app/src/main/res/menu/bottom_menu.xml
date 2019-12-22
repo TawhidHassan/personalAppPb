@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/menuOne"
-        android:title="Call"
-        android:icon="@drawable/ic_menu_send"
+    <item android:id="@+id/ptcBottom"
+        android:title="PTC"
+        android:icon="@drawable/ic_local_activity_black_24dp"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/menuTwo"
+    <item android:id="@+id/myAccountBottom"
         android:title="Message"
-        android:icon="@drawable/abc_vector_test"
+        android:icon="@drawable/ic_account_box_black_24dp"
         app:showAsAction="ifRoom"
         />
 </menu>

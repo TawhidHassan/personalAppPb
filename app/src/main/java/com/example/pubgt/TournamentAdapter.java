@@ -1,6 +1,7 @@
 package com.example.pubgt;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -59,6 +61,8 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
             public void onClick(View v) {
                 Intent tournamentIntent=new Intent(context,TournamentDetailsActivity.class);
                 v.getContext().startActivity(tournamentIntent);
+                Activity activity = (Activity) context;
+                activity.overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
 
             }
         });
@@ -107,8 +111,11 @@ public class TournamentAdapter extends RecyclerView.Adapter<TournamentAdapter.Vi
                 public void onClick(View v) {
                     Intent tournamentIntent=new Intent(context,TournamentDetailsActivity.class);
                     v.getContext().startActivity(tournamentIntent);
+                    Activity activity = (Activity) context;
+                    activity.overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
                 }
             });
+
         }
         @SuppressLint("ResourceAsColor")
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

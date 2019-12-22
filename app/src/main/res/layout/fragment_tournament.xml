@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TournamentFragment">
 
-  <LinearLayout
-      android:id="@+id/title"
-      android:layout_width="match_parent"
-      android:layout_height="200dp"
-      android:background="@color/mainColor"
-      android:orientation="horizontal"
-      />
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/tournamentrecyclerViewId"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_below="@+id/title"
-      android:layout_marginBottom="90dp"
-      android:layout_marginTop="-120dp">
 
-  </androidx.recyclerview.widget.RecyclerView>
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/no_data_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="no_data_error.json"
+        app:lottie_loop="true" />
+    <TextView
+        android:id="@+id/no_tournamemtTextId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slabone_extrem_bold_regular"
+        android:text="No Tournament"
+        android:textColor="#F54646"
+        android:textAlignment="center"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/no_data_animation"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:id="@+id/TournamentTop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/mainColor"
+        android:orientation="horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tournamentrecyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TournamentTop"
+        android:layout_marginTop="-120dp"
+        android:layout_marginBottom="90dp">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </RelativeLayout>

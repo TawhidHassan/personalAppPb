@@ -42,6 +42,8 @@ public class MyAccountFragment extends Fragment {
             public void onClick(View v) {
                 Intent accountIntent=new Intent(getActivity(),MyAccountActivity.class);
                 getActivity().startActivity(accountIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+
 
             }
         });
@@ -50,6 +52,7 @@ public class MyAccountFragment extends Fragment {
             public void onClick(View v) {
                 Intent accountIntent=new Intent(getActivity(),AddPaymentMethodActivity.class);
                 getActivity().startActivity(accountIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
 
             }
         });
@@ -58,6 +61,7 @@ public class MyAccountFragment extends Fragment {
             public void onClick(View v) {
                 Intent accountIntent=new Intent(getActivity(),ChangePasswordActivity.class);
                 getActivity().startActivity(accountIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
 
             }
         });
@@ -66,6 +70,7 @@ public class MyAccountFragment extends Fragment {
             public void onClick(View v) {
                 Intent accountIntent=new Intent(getActivity(),UpdatePersonalDataActivity.class);
                 getActivity().startActivity(accountIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
 
             }
         });

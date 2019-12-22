@@ -10,6 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +25,9 @@ import java.util.List;
 public class TournamentFragment extends Fragment {
 
     RecyclerView tournamentrecyclerView;
+    LinearLayout linearLayout;
+    TextView no_tournamemtText;
+    LottieAnimationView lottieAnimationView;
     List<TournamentModel>tournamentModelList=new ArrayList<>();
     public TournamentFragment() {
         // Required empty public constructor
@@ -32,7 +39,14 @@ public class TournamentFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_tournament, container, false);
 
         tournamentrecyclerView=view.findViewById(R.id.tournamentrecyclerViewId);
+        linearLayout=view.findViewById(R.id.TournamentTop);
+        lottieAnimationView=view.findViewById(R.id.no_data_animation);
+        no_tournamemtText=view.findViewById(R.id.no_tournamemtTextId);
 
+        linearLayout.setVisibility(View.VISIBLE);
+        tournamentrecyclerView.setVisibility(View.VISIBLE);
+        lottieAnimationView.setVisibility(View.GONE);
+        no_tournamemtText.setVisibility(View.GONE);
 
         //common layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
@@ -52,7 +66,18 @@ public class TournamentFragment extends Fragment {
 
         ///----------------------------------------------------------------------------------------------------
         //======================================================================================================
-
+        if (tournamentModelList.size()==0)
+        {
+            linearLayout.setVisibility(View.GONE);
+            tournamentrecyclerView.setVisibility(View.GONE);
+            lottieAnimationView.setVisibility(View.VISIBLE);
+            no_tournamemtText.setVisibility(View.VISIBLE);
+        }else {
+            linearLayout.setVisibility(View.VISIBLE);
+            tournamentrecyclerView.setVisibility(View.VISIBLE);
+            lottieAnimationView.setVisibility(View.GONE);
+            no_tournamemtText.setVisibility(View.GONE);
+        }
 
         return view;
     }

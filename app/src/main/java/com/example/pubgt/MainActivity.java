@@ -118,12 +118,12 @@ public class MainActivity extends AppCompatActivity {
                 isFabTapped = !isFabTapped;
                 if (isFabTapped) {
                     bottomAppBar.setFabAlignmentMode(BottomAppBar.FAB_ALIGNMENT_MODE_END);
-                    handleFrame(new WCFragment());
-                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_menu_send));
+                    handleFrame(new TournamentFragment());
+                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_arrow_back_black_24dp));
                 } else {
                     bottomAppBar.setFabAlignmentMode(BottomAppBar.FAB_ALIGNMENT_MODE_CENTER);
                     handleFrame(new HomeFragment());
-                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_arrow_back_black_24dp));
+                    fab.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_videogame_asset_black_24dp));
                 }
             }
 
@@ -137,11 +137,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.menuOne:
-                        handleFrame(new WCFragment());
+                    case R.id.myAccountBottom:
+                        handleFrame(new MyAccountFragment());
                         break;
 
-                    case R.id.menuTwo:
+                    case R.id.ptcBottom:
                         handleFrame(new PTCFragment());
                         break;
 
